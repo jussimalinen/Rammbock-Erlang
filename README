@@ -1,23 +1,26 @@
 Erlang prototyping for Rammbock.
 
-To compile S1AP files:
+To compile tools:
 1. Launch erlang shell
 > erl
-2. Load compiler
+2. compile
+c("percompile").
+c("readfile").
+
+To compile S1AP files:
+1. Load compiler
 l(percompile).
-3. Compile asn.1 specification set
+2. Compile asn.1 specification set
 percompile:compile("s1apasn/S1AP.set.asn").
 
 To decode a binary message:
-1. Launch erlang shell
-> erl
-2. load the compiled S1AP module
+1. load the compiled S1AP module
 l('S1AP).
-3. load the readfile module
+2. load the readfile module
 l('readfile').
-4. read the binary message
+3. read the binary message
 Bin = readfile:readfile("binaries/initiatingMessage.s1").
-5. decode
+4. decode
 'S1AP':decode('S1AP-PDU', Bin).
 
 For more information on Erlang asn.1 handling see http://www.erlang.org/doc/apps/asn1/asn1_ug.html and http://www.erlang.org/documentation/doc-5.2/lib/asn1-1.4/doc/html/asn1ct.html

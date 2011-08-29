@@ -1,0 +1,17 @@
+S1PDUVal 
+
+DEFINITIONS AUTOMATIC TAGS ::= 
+
+BEGIN
+
+IMPORTS
+	S1AP-PDU
+FROM S1AP-PDU-Descriptions;
+
+foo S1AP-PDU ::= {successfulOutcome {
+		procedureCode	14,
+		criticality		reject,
+		value	{protocolIEs	{}}
+}}
+
+END

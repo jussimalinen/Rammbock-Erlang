@@ -4,6 +4,7 @@ Test Teardown   Close Connections
 Default Tags    regression
 Resource        message_definitions/gtp_v2/v2.txt
 Resource        resources/server_client.txt
+Library         Rammbock
 
 *** Variables ***
 ${GTP_CONTROL_PORT}  2123

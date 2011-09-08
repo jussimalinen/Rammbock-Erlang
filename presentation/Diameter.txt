@@ -5,6 +5,7 @@ Test Teardown   Close Connections
 Default Tags    no-ci  linux-only
 Resource        message_definitions/diameter/0x01.txt
 Resource        resources/server_client.txt
+Library         Rammbock
 
 *** Variables ***
 ${DIAMETER_PORT}  3868
